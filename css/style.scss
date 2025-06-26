@@ -160,6 +160,11 @@ body.noscroll {
                         }
                     }
                 }
+                .active{
+                    a{
+                        color: #f5520a;
+                    }
+                }
             }
 
             >div{
@@ -913,7 +918,71 @@ body.noscroll {
         background-color: #fbe1c8;
         // loadingWrap
         .loadingWrap{
+            width: 100%;
+            height: 100vh;
+            background: url(../img/campany/intro_bg.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            gap: 40px 0;
+            // position: absolute;
+            // top: 0;
+            // left: 50%;
+            // transform: translateX(-50%);
+            z-index: 100;
+            .txt{
+                color: rgba(251, 225, 200, 0.7);
+                font-family: 'KartriderExtraBold';
+                font-size: 8vw;
+                line-height: 8vw;
+                display: block;
+                text-align: center;
+            }
+            .line{
+                width: 0%;
+                height: 1px;
+                background-color: #fff;
+                transition: width 0.5s ease;
+                position: absolute;
+                left: 0;
+            }
+            .line.active{
+                width: 100%;
+                transition-delay: 0.1s;
+            }
+            .txtBox{
+                display: flex;
+                gap: 0 5px;
+                b{
+                    color: #fbe1c8;
+                    font-size: 9vw;
+                    line-height: 9vw;   
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
 
+        .loadingWrap {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            transition: 1s;
+            z-index: 1;
+        }
+
+        .loadingWrap.hide {
+            top: -100%;
         }
 
         .navWrap{
@@ -2444,8 +2513,21 @@ body.noscroll {
             display: none;
         }
         #section{
+            // loadingWrap
+            .loadingWrap{
+                .txt01{
+                    font-size: 5rem;
+                    line-height: 4vw;
+                }
+                .txt02{
+                    font-size: 7rem;
+                    line-height: 6vw;
+                }
+            }
+
             .navWrap{
                 width: 100%;
+                min-height: 240px;
                 display: block;
                 padding: 188px 0 10px 0;
                 box-sizing: border-box;
@@ -2485,7 +2567,8 @@ body.noscroll {
                             }
                         }
                         a{
-                            height: 100%;
+                            height: 40px;
+                            line-height: 21px;
                             display: flex;
                             align-items: center;
                             text-align: center;
@@ -2612,6 +2695,8 @@ body.noscroll {
 
             // cont02
             #cont02{
+                padding: 100px 0 0 0;
+                box-sizing: border-box;
                 h2{
                     max-width: 1680px;
                     margin: 0 auto 30px;
@@ -2801,8 +2886,11 @@ body.noscroll {
                 margin: 0 auto;
                 .cont04Box01{
                     width: 580px;
+                    max-height: 400px;
                     gap: 30px 0;
                     padding: 0 0 0 15px;
+                    position: sticky;
+                    top: 100px;
                     >p{
                         font-size: 20px;
                         font-weight: 700;
@@ -2872,10 +2960,9 @@ body.noscroll {
 
             // cont05
             #cont05{
-        background-color: greenyellow;
                 max-width: 1680px;
                 margin: 0 auto;
-                padding: 0 0 170px 0;
+                padding: 100px 0 170px 0;
                 h2{
                     margin: 0;
                 }
@@ -2889,15 +2976,18 @@ body.noscroll {
                         z-index: 9;
                         ul{
                             display: flex;
-                            gap: 0 30px;
+                            gap: 0 20px;
                             li{
                                 color: #fff;
                                 font-size: 15px;
-                                cursor: pointer;
-                                padding: 5.5px 20px;
+                                padding: 5.5px 15px;
                                 border-radius: 20px;
                                 box-sizing: border-box;
                                 position: relative;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
                                 &::after{
                                     content: '';
                                     width: 1px;
@@ -2905,7 +2995,7 @@ body.noscroll {
                                     background-color: rgba(255, 255, 255, 0.3);
                                     position: absolute;
                                     top: 50%;
-                                    right: -15px;
+                                    right: -10px;
                                     transform: translateY(-50%);
                                 }
                                 &:last-of-type{
@@ -2922,7 +3012,7 @@ body.noscroll {
                     .outerTit{
                         transform: unset;
                         left: 40px;
-                        bottom: 80px;
+                        bottom: 120px;
                     }
                     .slideBoxInner{
                         .custom-pagination{
@@ -2930,7 +3020,7 @@ body.noscroll {
                             color: rgba(255, 255, 255, 0.8);
                             position: absolute;
                             left: 60px;
-                            bottom: 40px;
+                            bottom: 90px;
                             z-index: 1;
                         }
                         [class ^= "inner-button"]{
@@ -2952,6 +3042,8 @@ body.noscroll {
 
             // cont06
             #cont06{
+                padding: 100px 0 0 0;
+                box-sizing: border-box;
                 p{
                     font-size: 20px;
                     text-align: center;
@@ -2987,6 +3079,8 @@ body.noscroll {
 
             // cont07
             #cont07{
+                padding: 100px 0 0 0;
+                box-sizing: border-box;
                 h2{
                     font-size: 60px;
                     max-width: 1680px;
@@ -3067,7 +3161,7 @@ body.noscroll {
             #cont08{
                 max-width: 1680px;
                 margin: 0 auto;
-                padding: 170px 0 200px 0;
+                padding: 100px 0 200px 0;
                 h2{
                     border: none;
                     margin: 0;
@@ -3111,6 +3205,26 @@ body.noscroll {
     }
 }
 
+// @include size1140{
+//     // 회사소개
+//     #wrap.campanyWrap{
+//         #section{
+//             // cont05
+//             #cont05{
+//                 .slideBoxOut{
+//                     .slideTab{
+//                         ul{
+//                             li{
+//                                 background-color: darkgoldenrod;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
 @include layout{
     // 메인
     #wrap.mainWrap{
@@ -3151,7 +3265,16 @@ body.noscroll {
         #section{
             // cont05
             #cont05{
-                background-color: red;
+                .slideBoxOut{
+                    .outerTit{
+                        bottom: 90px;
+                    }
+                    .slideBoxInner{
+                        .custom-pagination{
+                            bottom: 60px;
+                        }
+                    }
+                }
             }
         }
     }
