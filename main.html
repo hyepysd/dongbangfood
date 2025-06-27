@@ -484,6 +484,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/common.js"></script>
 
     <!-- aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -496,39 +497,13 @@
 
 
     <script>
-        // aos S
+         // aos S
         AOS.init({
             once: true,
         });
         // aos E
 
-
-        // 햄버거 메뉴 S
-        function btnMenu(){
-            $('#header').toggleClass('active');
-        }
-        // 햄버거 메뉴 E
-
-
-        // 스크롤 올리면 메뉴 노출 내리면 비노출 S
-        const header = document.getElementById('header');
-        let lastScrollY = window.scrollY;
-
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-
-            if (currentScrollY > lastScrollY) {
-                // 스크롤 내림
-                header.classList.add('scroll');
-            } else {
-                header.classList.remove('scroll');
-            }
-
-            lastScrollY = currentScrollY;
-        });
-        // 스크롤 올리면 메뉴 노출 내리면 비노출 E
         
-
         // 숫자 카운트 S
         function startScript() {
             // 여기에 카운터, 애니메이션 등 원하는 코드 추가
