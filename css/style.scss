@@ -3954,8 +3954,9 @@ body.noscroll {
                         align-items: flex-end;
                         div{
                             display: flex;
-                            align-items: flex-end;
-                            gap: 0 30px;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            gap: 30px 0;
                             h2{
                                 font-size: 130px;
                                 line-height: 120px;
@@ -3997,6 +3998,7 @@ body.noscroll {
                                 &:nth-child(3n+1){
                                     &::after{
                                         border-bottom: transparent;
+                                        left: -300%;
                                     }
                                 }
                                 &:nth-child(4n+1){
@@ -4032,6 +4034,9 @@ body.noscroll {
                                 }
                             }
                         }
+                    }
+                    .listBackPc{
+                        display: flex;
                     }
                 }
             }
