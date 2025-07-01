@@ -3,6 +3,10 @@
     display: none;
 }
 
+.imgPc{
+    display: none;
+}
+
 /* 메뉴 클릭 시 스크롤 비활성화 */
 body.noscroll {
     overflow: hidden;
@@ -910,9 +914,6 @@ body.noscroll {
 
 // 회사소개
 #wrap.campanyWrap{
-    .imgPc{
-        display: none;
-    }
     #section{
         box-sizing: border-box;
         background-color: #fbe1c8;
@@ -2024,6 +2025,378 @@ body.noscroll {
     }
 }
 
+// 제품
+#wrap.productWrap{
+    #section{
+        padding: 125px 0 0 0;
+        box-sizing: border-box;
+        background-color: #fbe1c8;
+        // cont01
+        #cont01{
+            h2{
+                font-size: 80px;
+                line-height: 80px;
+                color: #ff5f00;
+                letter-spacing: -0.05em;
+                text-align: center;
+                font-family: 'KartriderExtraBold';
+            }
+            p{
+                font-size: 18px;
+                font-weight: 900;
+                text-align: center;
+                color: #ff5f00;
+                margin: 25px auto 0;
+            }            
+            .slideBox{
+                margin: 50px auto 0;
+                padding: 0 0 80px 0;
+                box-sizing: border-box;
+                .swiper-button-wrap{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 0;
+                    margin: 0 15px 60px;
+                    // border-bottom: 1px dashed #ff5f00;
+                    box-sizing: border-box;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        border-bottom: 1px dashed #ff5f00;
+                        position: absolute;
+                        bottom: -20px;
+                    }
+                    [class ^= "swiper-button"]{
+                        position: unset;
+                        width: auto;
+                        height: auto;
+                        margin: unset;
+                        &::after{
+                            display: none;
+                        }
+                        .nav-title{
+                            font-size: 13px;
+                            color: #ff5f00;
+                            font-weight: 700;
+                            display: flex;
+                            align-items: center;
+                            gap: 0 6px;
+                            &::after{
+                                content: '';
+                                width: 16px;
+                                height: 16px;
+                                background: url(../img/ic_24_arrow_orange.svg) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                    .swiper-button-prev{
+                        .nav-title{
+                            &::before{
+                                content: '';
+                                width: 16px;
+                                height: 16px;
+                                background: url(../img/ic_24_arrow_orange.svg) no-repeat;
+                                background-size: contain;
+                                transform: rotate(180deg);
+                            }
+                            &::after{
+                                display: none
+                            }
+                        }
+                    }
+
+                    .now-title{
+                        height: 33px;
+                        font-size: 14px;
+                        background-color: #ff5f00;
+                        color: #fff;
+                        font-weight: 700;
+                        padding: 0 16px;
+                        border-radius: 16px;
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                }
+
+                .swiper-wrapper{
+                    margin: 40px auto 0;
+                    .swiper-slide{
+                        width: 232px;
+                        font-size: 0;
+                        a{
+                            display: block;
+                            width: 100%;
+                            height: 300px;
+                        }
+                    }
+                    .slide01{
+                        a{
+                            background: url(../img/product/img_spice.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide02{
+                        a{
+                            background: url(../img/product/img_sauce.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide03{
+                        a{
+                            background: url(../img/product/img_powder.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide04{
+                        a{
+                            background: url(../img/product/img_retrot.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide05{
+                        a{
+                            background: url(../img/product/img_meat.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide06{
+                        a{
+                            background: url(../img/product/img_beverage.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+
+                    .swiper-slide-active{
+                        position: relative;
+                        &::after{
+                            content: '';
+                            width: 47px;
+                            height: 47px;
+                            background: url(../img/product/img_point.svg) no-repeat;
+                            background-size: contain;
+                            position: absolute;
+                            top: 0;
+                            right: 0;  
+                            animation: rotate 10s linear infinite;
+                        }
+                        @keyframes rotate {
+                            0%{
+                                transform: rotate(0deg);
+                            }
+                            100%{
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+                    .slide01.swiper-slide-active{
+                        a{
+                            background: url(../img/product/img_spice_active.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide02.swiper-slide-active{
+                        a{
+                            background: url(../img/product/img_sauce_active.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide03.swiper-slide-active{
+                        a{
+                            background: url(../img/product/img_powder_active.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide04.swiper-slide-active{
+                        a{
+                            background: url(../img/product/img_retrot_active.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide05.swiper-slide-active{
+                        a{
+                            background: url(../img/product/img_meat_active.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .slide06.swiper-slide-active{
+                        a{
+                            background: url(../img/product/img_beverage_active.png) no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 제품 - 공통
+#wrap.product{
+    #section{
+        // cont01
+        #cont01{
+            .productBg{
+                height: 277px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    animation: 1.5s subVisual cubic-bezier(0.39, 0.58, 0.57, 1) forwards;
+                    @keyframes subVisual {
+                        0% {
+                            transform: scale(1.2);
+                        }
+                        100% {
+                            transform: scale(1);
+                            transform: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        // cont02
+        #cont02{
+            padding: 30px 15px 80px;
+            box-sizing: border-box;
+            background-color: #fff9f3;
+            .listBack{
+                color: #ff5f00;
+                display: flex;
+                align-items: center;
+                gap: 0 5px;
+                font-size: 15px;
+                font-weight: 900;
+                margin: 0 0 40px 0;
+                &::before{
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    background: url(../img/ic_24_arrow_orange.svg) no-repeat;
+                    background-size: contain;
+                    transform: rotate(180deg);
+                }
+            }
+            .linkBox{
+                display: none;
+            }
+            .txtBox{
+                color: #ff5f00;
+                h2{
+                    font-size: 80px;
+                    line-height: 90px;
+                    font-family: 'KartriderExtraBold';
+                    text-align: center;
+                }
+                b{
+                    font-size: 16px;
+                    margin: 6px 0 30px 0;
+                    display: block;
+                    text-align: center
+                }
+                .subTxtBox{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px 0;
+                    p{
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }
+            .listBox{
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    border-top: 1px dashed #ff5f00;
+                    margin: 50px 0 0 0;
+                    box-sizing: border-box;
+                    li{
+                        width: calc(100% / 3);
+                        padding: 20px 0 24px;
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px 0;
+                        position: relative;
+                        &:nth-child(3n+1){
+                            &::after{
+                                content: '';
+                                width: 300%;
+                                height: 1px;
+                                border-bottom: 1px dashed #ff5f00;
+                                position: absolute;
+                                bottom: 0px;
+                                left: 0px;
+                                z-index: 1;
+                            }
+                        }
+                        img{
+                            width: 100%;
+                            max-width: 110px;
+                        }
+                        .point{
+                            max-height: 28px;
+                            background-color: #ff5f00;
+                            position: absolute;
+                            top: 0px;
+                            left: 0;
+                            color: #fff;
+                            font-size: 10px;
+                            padding: 8px;
+                            box-sizing: border-box;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                        }
+                        p{
+                            color: #ff5f00;
+                            font-size: 12px;
+                            line-height: 12px;
+                            margin: 8px 0 0 0;
+                        }
+                        b{
+                            color: #ff5f00;
+                            font-size: 13px;
+                            line-height: 16px;
+                            text-align: center;
+                        }
+                    }
+                    :hover{
+                        background-color: #ffebdc;
+                        img{
+                            background-color: #ff5f00;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+            .listBackPc{
+                display: none
+            }
+        }
+    }
+}
+
+// 제품 - 향신료 Spice
+#wrap.productSpiceWrap{
+}
+
+// 제품 - 향신료 Sauce
+#wrap.productSauceWrap{
+}
+
 
 // 반응형 S
 @import "./mixin";
@@ -2035,6 +2408,12 @@ body.noscroll {
     }
     .pcBr{
         display: block;
+    }
+    .imgPc{
+        display: block;
+    }
+    .imgMo{
+        display: none;
     }
 
     // header
@@ -2506,12 +2885,6 @@ body.noscroll {
 
     // 회사소개
     #wrap.campanyWrap{
-        .imgPc{
-            display: block;
-        }
-        .imgMo{
-            display: none;
-        }
         #section{
             // loadingWrap
             .loadingWrap{
@@ -3203,27 +3576,491 @@ body.noscroll {
 
         }
     }
-}
 
-// @include size1140{
-//     // 회사소개
-//     #wrap.campanyWrap{
-//         #section{
-//             // cont05
-//             #cont05{
-//                 .slideBoxOut{
-//                     .slideTab{
-//                         ul{
-//                             li{
-//                                 background-color: darkgoldenrod;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+    // 제품
+    #wrap.productWrap{
+        #section{
+            padding: 250px 0 0 0;
+            // cont01
+            #cont01{
+                h2{
+                    font-size: 150px;
+                    line-height: 150px;
+                }
+                p{
+                    font-size: 30px;
+                }
+                .slideBox{
+                    margin: 80px 0 0;
+                    .swiper-button-wrap{
+                        margin: 0;
+                        padding: 0;
+                        &::after{
+                            bottom: -40px;
+                        }
+                        [class ^= "swiper-button-"]{
+                            display: none;
+                        }
+                        .now-title{
+                            display: none;
+                        }
+                        .swiper-pagination{
+                            position: unset;
+                            margin: 0;
+                            display: flex;
+                            justify-content: center;
+                            gap: 0 30px;
+                            .swiper-pagination-bullet{
+                                margin: 0;
+                                width: unset;
+                                height: 75px;
+                                background-color: transparent;
+                                opacity: 1;
+                                color: #ff5f00;
+                                font-size: 18px;
+                                font-weight: 600;
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 10px 0;
+                                padding: 0 30px;
+                                box-sizing: border-box;
+                                border-radius: 50px;
+                                &:hover{
+                                    background-color: #ff5f00;
+                                    color: #fff;
+                                    &::before{
+                                        color: #fff;
+                                    }
+                                }
+                                &::after{
+                                    content: '';
+                                    width: 1px;
+                                    height: 8px;
+                                    background-color: #f6b28d;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: -15px;
+                                    transform: translateY(-50%);
+                                    cursor: auto;
+                                }
+                                &::before{
+                                    content: '';
+                                    font-size: 32px;
+                                    line-height: 32px;
+                                    font-family: 'KartriderExtraBold';
+                                    font-style: italic;
+                                    color: #ff5f00;
+                                }
+                                &:nth-of-type(1){
+                                    &::before{
+                                        content: 'Spice';
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    &::before{
+                                        content: 'Sauce';
+                                    }
+                                }
+                                &:nth-of-type(3){
+                                    &::before{
+                                        content: 'Powder';
+                                    }
+                                }
+                                &:nth-of-type(4){
+                                    &::before{
+                                        content: 'Retrot';
+                                    }
+                                }
+                                &:nth-of-type(5){
+                                    &::before{
+                                        content: 'Meat Solution';
+                                    }
+                                }
+                                &:nth-of-type(6){
+                                    &::before{
+                                        content: 'Beverage Base';
+                                    }
+                                    &::after{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .swiper-wrapper{
+                        margin: 80px 0 0 0;
+                         overflow: visible !important;
+                        .swiper-slide{
+                            position: relative;
+                            &::after{
+                                content: '';
+                                width: 72px;
+                                height: 72px;
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                background: url(../img/product/img_point.svg) no-repeat;
+                                animation: rotate 10s linear infinite;
+                                display: none;
+                            }
+                            a{
+                                height: 487px;
+                                transition: 0.3s;
+                            }
+                        }
+                        .swiper-slide-active{
+                            &::after{
+                                display: none;
+                            }
+                        }
+                        
+                        .slide01.swiper-slide-active{
+                            a{
+                                background: url(../img/product/img_spice.png) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                        .slide02.swiper-slide-active{
+                            a{
+                                background: url(../img/product/img_sauce.png) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                        .slide03.swiper-slide-active{
+                            a{
+                                background: url(../img/product/img_powder.png) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                        .slide04.swiper-slide-active{
+                            a{
+                                background: url(../img/product/img_retrot.png) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                        .slide05.swiper-slide-active{
+                            a{
+                                background: url(../img/product/img_meat.png) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                        .slide06.swiper-slide-active{
+                            a{
+                                background: url(../img/product/img_beverage.png) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+
+                        .slide01{
+                            &:hover{
+                                a{
+                                    background: url(../img/product/img_spice_active.png) no-repeat;
+                                    background-size: contain; 
+                                    border-radius: 500px;
+                                }
+                                &::after{
+                                    display: block;
+                                }
+                            }
+                        }
+                        .slide02{
+                            &:hover{
+                                a{
+                                    background: url(../img/product/img_sauce_active.png) no-repeat;
+                                    background-size: contain;
+                                    border-radius: 500px;
+                                }
+                                &::after{
+                                    display: block;
+                                }
+                            }
+                        }
+                        .slide03{
+                            &:hover{
+                                a{
+                                    background: url(../img/product/img_powder_active.png) no-repeat;
+                                    background-size: contain;
+                                    border-radius: 500px;
+                                }
+                                &::after{
+                                    display: block;
+                                }
+                            }
+                        }
+                        .slide04{
+                            &:hover{
+                                a{
+                                    background: url(../img/product/img_retrot_active.png) no-repeat;
+                                    background-size: contain;
+                                    border-radius: 500px;
+                                }
+                                &::after{
+                                    display: block;
+                                }
+                            }
+                        }
+                        .slide05{
+                            &:hover{
+                                a{
+                                    background: url(../img/product/img_meat_active.png) no-repeat;
+                                    background-size: contain;
+                                    border-radius: 500px;
+                                }
+                                &::after{
+                                    display: block;
+                                }
+                            }
+                        }
+                        .slide06{
+                            &:hover{
+                                a{
+                                    background: url(../img/product/img_beverage_active.png) no-repeat;
+                                    background-size: contain;
+                                    border-radius: 500px;
+                                }
+                                &::after{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 제품 - 공통
+    #wrap.product{
+        #section{
+            // cont01
+            #cont01{
+                .productBg{
+                    height: 640px;
+                }
+            }
+
+            // cont02
+            #cont02{
+                padding: 50px 15px 200px;
+                .layout{
+                    max-width: 1710px;
+                    margin: 0 auto;
+                    .listBack{
+                        font-size: 18px;
+                        &::before{
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                    .linkBox{
+                        display: flex;
+                        gap: 0 30px;
+                        margin: 30px 0 150px 0;
+                        padding: 30px 0 0 0;
+                        border-top: 1px solid #ff5f00;
+                        box-sizing: border-box;
+                        li{
+                            position: relative;
+                            border-radius: 60px;
+                            &::after{
+                                content: '';
+                                width: 1px;
+                                height: 8px;
+                                background-color: #f6b28d;
+                                position: absolute;
+                                top: 50%;
+                                right: -15px;
+                                transform: translateY(-50%);
+                            }
+                            a{
+                                color: #ff5f00;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 10px 0;
+                                font-size: 18px;
+                                font-weight: 900;
+                                padding: 4.5px 30px;
+                                box-sizing: border-box;
+                                &::before{
+                                    color: #ff5f00;
+                                    font-size: 32px;
+                                    line-height: 32px;
+                                    font-family: 'KartriderExtraBold';
+                                    font-style: italic;
+                                }
+                            }
+                            &:nth-of-type(1){
+                                a{
+                                    &::before{
+                                        content: 'Spice';
+                                    }
+                                }
+                            }
+                            &:nth-of-type(2){
+                                a{
+                                    &::before{
+                                        content: 'Sauce';
+                                    }
+                                }
+                            }
+                            &:nth-of-type(3){
+                                a{
+                                    &::before{
+                                        content: 'Powder';
+                                    }
+                                }
+                            }
+                            &:nth-of-type(4){
+                                a{
+                                    &::before{
+                                        content: 'Retrot';
+                                    }
+                                }
+                            }
+                            &:nth-of-type(5){
+                                a{
+                                    &::before{
+                                        content: 'Meat Solution';
+                                    }
+                                }
+                            }
+                            &:nth-of-type(6){
+                                &::after{
+                                    display: none;
+                                }
+                                a{
+                                    &::before{
+                                        content: 'Beverage Base';
+                                    }
+                                }
+                            }
+                        }
+                        .active{
+                            background-color: #ff5f00;
+                            a{
+                                color: #fff;
+                                &::before{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                    .txtBox{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        div{
+                            display: flex;
+                            align-items: flex-end;
+                            gap: 0 30px;
+                            h2{
+                                font-size: 130px;
+                                line-height: 120px;
+                                text-align: left;
+                                font-style: italic;
+                            }
+                            b{
+                                font-size: 40px;
+                                line-height: 40px;
+                                text-align: left;
+                                margin: 0;
+                            }
+                        }
+                        .subTxtBox{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 30px 0;
+                            max-width: 570px;
+                            gap: 20px 0;
+                            p{
+                                font-size: 16px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .listBox{
+                        ul{
+                            padding: 0 0 30px;
+                            &::before{
+                                font-size: 16px;
+                                width: 82px;
+                                height: 43px;
+                                font-weight: 700;
+                            }
+                            li{
+                                width: calc(100% / 4);
+                                gap: 20px 0;
+                                padding: 47px 15px 60px;
+                                &:nth-child(3n+1){
+                                    &::after{
+                                        border-bottom: transparent;
+                                    }
+                                }
+                                &:nth-child(4n+1){
+                                    &::after {
+                                        content: '';
+                                        width: 400%;
+                                        height: 1px;
+                                        border-bottom: 1px dashed #ff5f00;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        z-index: 1;
+                                    }
+                                    }
+                                img{
+                                    width: 280px;
+                                    max-width: 280px;
+                                }
+                                .point{
+                                    max-height: 43px;
+                                    padding: 12px 20px;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                }
+                                p{
+                                    font-size: 16px;
+                                    line-height: 16px;
+                                    margin: 25px 0 0 0;
+                                }
+                                b{
+                                    font-size: 24px;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 제품 - 향신료 Spice
+    #wrap.productSpiceWrap{
+    }
+
+    // 제품 - 소스 Sauce
+    #wrap.productSauceWrap{
+        #section{
+            #cont02{
+                .layout{
+                     .listBox{
+                        ul{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                     }
+                }
+            }
+        }
+    }
+
+
+}
 
 @include layout{
     // 메인
