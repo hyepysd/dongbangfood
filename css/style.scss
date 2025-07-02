@@ -7,6 +7,24 @@
     display: none;
 }
 
+.titleBox{
+    h2{
+        font-size: 80px;
+        line-height: 80px;
+        color: #ff5f00;
+        letter-spacing: -0.05em;
+        text-align: center;
+        font-family: 'KartriderExtraBold';
+    }
+    p{
+        font-size: 18px;
+        font-weight: 900;
+        text-align: center;
+        color: #ff5f00;
+        margin: 25px auto 0;
+    }
+}
+
 /* 메뉴 클릭 시 스크롤 비활성화 */
 body.noscroll {
     overflow: hidden;
@@ -930,10 +948,6 @@ body.noscroll {
             justify-content: center;
             align-content: center;
             gap: 40px 0;
-            // position: absolute;
-            // top: 0;
-            // left: 50%;
-            // transform: translateX(-50%);
             z-index: 100;
             .txt{
                 color: rgba(251, 225, 200, 0.7);
@@ -2032,22 +2046,14 @@ body.noscroll {
         box-sizing: border-box;
         background-color: #fbe1c8;
         // cont01
-        #cont01{
-            h2{
-                font-size: 80px;
-                line-height: 80px;
-                color: #ff5f00;
-                letter-spacing: -0.05em;
-                text-align: center;
-                font-family: 'KartriderExtraBold';
-            }
-            p{
-                font-size: 18px;
-                font-weight: 900;
-                text-align: center;
-                color: #ff5f00;
-                margin: 25px auto 0;
-            }            
+        p{
+            font-size: 18px;
+            font-weight: 900;
+            text-align: center;
+            color: #ff5f00;
+            margin: 25px auto 0;
+        }
+        #cont01{     
             .slideBox{
                 margin: 50px auto 0;
                 padding: 0 0 80px 0;
@@ -2130,11 +2136,13 @@ body.noscroll {
                     margin: 40px auto 0;
                     .swiper-slide{
                         width: 232px;
+                        height: 300px;
                         font-size: 0;
                         a{
                             display: block;
                             width: 100%;
-                            height: 300px;
+                            height: 100%;
+                            // height: 300px;
                         }
                     }
                     .slide01{
@@ -2292,10 +2300,7 @@ body.noscroll {
             .txtBox{
                 color: #ff5f00;
                 h2{
-                    font-size: 80px;
                     line-height: 90px;
-                    font-family: 'KartriderExtraBold';
-                    text-align: center;
                 }
                 b{
                     font-size: 16px;
@@ -2389,12 +2394,211 @@ body.noscroll {
     }
 }
 
-// 제품 - 향신료 Spice
-#wrap.productSpiceWrap{
+// news
+#wrap.newsWrap{
+    #section{
+        padding: 125px 15px 80px;
+        background-color: #fbe1c8;
+        .listBox{
+            margin: 50px 0 0 0;
+            ul{
+                &:first-of-type{
+                    border-top: 1px solid #ff5f00;
+                    box-sizing: border-box;
+                }   
+                li{
+                    a{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px 0;
+                        color: #ff5f00;
+                        border-bottom: 1px solid #ff5f00;
+                        padding: 20px 0;
+                        box-sizing: border-box;
+                        .num{
+                            font-size: 12px;
+                            line-height: 12px;
+                            font-family: 'KartriderExtraBold';
+                            margin: 0 0 6px 0;
+                        }
+
+                        .txtBox{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 6px 0;
+                            .tit{
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                            .desc{
+                                font-size: 13px;
+                                line-height: 20px;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                -webkit-box-orient: vertical;
+
+                            }
+                            .date{
+                                font-size: 12px;
+                                line-height: 12px;
+                                font-family: 'KartriderExtraBold';
+                                margin: 14px 0 0 0;
+                            }
+                            .more{
+                                display: none;
+                            }
+                        }
+                        
+                        .imgBox{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .numBox{
+                margin: 40px 0 0 0;
+                display: flex;
+                justify-content: center;
+                gap: 0 10px;
+                li{
+                    button{
+                        width: 32px;
+                        height: 32px;
+                        color: #ff5f00;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+                .num{
+                    &:hover{
+                        button{
+                            background-color: #ff5f00;
+                            color: #fff;
+                        }
+                    }
+                }
+                .btnPrev, .btnNext{
+                    button{
+                        background: url(../img/ic_pagination.svg) no-repeat;
+                        background-size: contain;
+                        font-size: 0
+                    }
+                }
+                .btnPrev{
+                    transform: rotate(180deg);
+                }
+                .active{
+                    button{
+                        background-color: #ff5f00;
+                        color: #fff
+                    }
+                }
+            }
+        }
+    }
 }
 
-// 제품 - 향신료 Sauce
-#wrap.productSauceWrap{
+// news 본문
+#wrap.newsDetail{
+    #section{
+        // cont01
+        #cont01{
+            .contWrap{
+                margin: 50px 0 0;
+                .listBack{
+                    display: flex;
+                    align-items: center;
+                    gap: 0 6px;
+                    color: #ff5f00;
+                    font-size: 15px;
+                    font-weight: 600;
+                    &::before{
+                        content: '';
+                        width: 16px;
+                        height: 16px;
+                        background: url(../img/ic_24_arrow_orange.svg) no-repeat;
+                        background-size: contain;
+                        transform: rotate(180deg);
+                    }
+                }
+                .contBox{
+                    color: #ff5f00;
+                    .topTit{
+                        margin: 30px 0 20px;
+                        border-top: 1px solid #ff5f00;
+                        border-bottom: 1px solid #ff5f00;
+                        padding: 30px 0 20px;
+                        box-sizing: border-box;
+                        .tit{
+                            font-size: 20px;
+                            line-height: 30px;
+                            text-align: center;
+                            display: block;
+                        }
+                        .date{
+                            font-size: 18px;
+                            margin: 18px 0 0 0;
+                            text-align: center;
+                        }
+                    }
+                    .cont{
+                        padding: 0 0 50px 0;
+                        box-sizing: border-box;
+                        .imgBox{
+                            margin: 0 0 20px 0;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        p{
+                            font-size: 18px;
+                            line-height: 28px;
+                            text-align: justify;
+                        }
+
+                        .linkWrap{
+                            margin: 20px 0 0 0;
+                            b{
+                                a{
+                                    text-decoration: underline;
+                                }
+                            }
+                            a{
+                                display: block;
+                                color: #ff5f00;
+                                font-weight: 400;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .btnWrap{
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 30px 0 0 0;
+                        border-top: 1px solid #ff5f00;
+                        box-sizing: border-box;
+                        .btnOriginalNews{
+                            color: #ff5f00;
+                            font-size: 15px;
+                            font-weight: 600;
+                            display: flex;
+                            align-items: center;
+                            gap: 0 4px;
+                            &::after{
+                                content: '';
+                                width: 18px;
+                                height: 18px;
+                                background: url(../img/ic_24_arrow_diagonal.svg) no-repeat;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -2414,6 +2618,16 @@ body.noscroll {
     }
     .imgMo{
         display: none;
+    }
+
+    .titleBox{
+        h2{
+            font-size: 150px;
+            line-height: 150px;
+        }
+        p{
+            font-size: 30px;
+        }
     }
 
     // header
@@ -2532,7 +2746,6 @@ body.noscroll {
             }
             .linkBox{
                 position: absolute;
-                top: 70px;
                 right: 15px;
                 .youtube{
                     width: 35px;
@@ -3583,13 +3796,6 @@ body.noscroll {
             padding: 250px 0 0 0;
             // cont01
             #cont01{
-                h2{
-                    font-size: 150px;
-                    line-height: 150px;
-                }
-                p{
-                    font-size: 30px;
-                }
                 .slideBox{
                     margin: 80px 0 0;
                     .swiper-button-wrap{
@@ -3706,7 +3912,7 @@ body.noscroll {
                                 display: none;
                             }
                             a{
-                                height: 487px;
+                                height: 280px;
                                 transition: 0.3s;
                             }
                         }
@@ -4064,6 +4270,120 @@ body.noscroll {
         }
     }
 
+    // news
+    #wrap.newsWrap{
+        #section{
+            padding: 220px 15px 200px;
+            .listBox{
+                ul{
+                    li{
+                        a{
+                            flex-direction: row;
+                            gap: 0 45px;
+                            padding: 20px;
+                            &:hover{
+                                background-color: #f5520a;
+                                color: #fbe1c8;
+                                .txtBox{
+                                    .more{
+                                        opacity: 1;
+                                        right: 0%;
+                                    }
+                                }
+                            }
+                            .num{
+                                width: 20px;
+                                font-size: 20px;
+                            }
+                            .txtBox{
+                                width: calc(100% - 311px);
+                                justify-content: space-between;
+                                position: relative;
+                                overflow: hidden;
+                                .tit{
+                                    font-size: 28px;
+                                    line-height: 30px;
+                                }
+                                .desc{
+                                    font-size: 16px;
+                                    line-height: 25px;
+                                }
+                                .date{
+                                    font-size: 16px;
+                                    line-height: 16px;
+                                    margin: 0;
+                                }
+                                .more{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 0 6px;
+                                    position: absolute;
+                                    top: 0px;
+                                    right: 2%;
+                                    opacity: 0;
+                                    transition: 0.5s;
+                                    color: #fbe1c8;
+                                    &::after{
+                                        content: '';
+                                        width: 16px;
+                                        height: 16px;
+                                        background: url(../img/ic_24_arrow_white.svg) no-repeat;
+                                        background-size: contain;
+                                    }
+                                }
+                                
+                            }
+                            .imgBox{
+                                display: block;
+                                width: 210px;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // news 본문
+    #wrap.newsDetail{
+        #section{
+            // cont01
+            #cont01{
+                .contWrap{
+                    margin: 80px 0 0;
+                    .listBack{
+                        font-size: 18px;
+                        &::before{
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+
+                    .contBox{
+                        .topTit{
+                            padding: 60px 0;
+                            margin: 30px 0;
+                            .tit{
+                                font-size: 40px;
+                                line-height: 40px;
+                            }
+                            .date{
+                                font-size: 20px;
+                                margin: 16px 0 0;
+                            }
+                        }
+                        .cont{
+                            max-width: 1000px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
 
