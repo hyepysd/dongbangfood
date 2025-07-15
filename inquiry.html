@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="title" content="동방푸드드">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- og tag -->
+    <!-- 소셜 미디어용 Open Graph 태그 (예: 페이스북, 카카오톡 등) -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="">
+    
+    <!-- 트위터 카드 설정 -->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- 기본 파비콘 -->
+    <link rel="icon" href="./img/favicon.svg" type="image/png">
+    <!-- 고해상도용 -->
+    <link rel="icon" sizes="32x32" href="./img/favicon.svg">
+    <link rel="icon" sizes="16x16" href="./img/favicon.svg">
+
+    <title>지혜 동방푸드 QNA 1:1 문의</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css?var=v1">
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- font (Anton) -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <ul id="skipNavigation">
+        <li><a href="#header" tabindex="0">주메뉴 바로가기</a></li>
+        <li><a href="#container">본문 바로가기</a></li>
+    </ul>
+
+    <div id="wrap" class="QandAWrap inquiryWrap">
+        <!-- S: HEADER -->
+        <header id="header">
+            <div class="layout">
+                <div class="headerCont">
+                    <h1 class="logo">
+                        <a href="#">동방푸드</a>
+                    </h1>
+                    <div class="headerBox">
+                        <button type="button" class="btnLan">KR</button>
+                        <div class="btnMenu" onclick="btnMenu();">
+                            <p>MENU</p>
+                            <div>
+                                <input type="checkbox" id="menuCheckbox" />
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuCont">
+                        <ul>
+                            <li>
+                                <a href="campany.html">
+                                    COMPANY
+                                    <span>회사소개</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="product.html">
+                                    PRODUCTS
+                                    <span>제품</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="news.html">
+                                    NEWS
+                                    <span>뉴스</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sns.html">
+                                    SNS
+                                    <span>
+                                        동방푸드 SNS
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="QandA.html">
+                                    Q&A
+                                    <span>문의하기</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <div class="language">
+                                <a href="#">EN</a>
+                                <a href="#" class="active">KO</a>
+                            </div>
+                            <div class="sns">
+                                <a href="#" class="youtube">youtube</a>
+                                <a href="#" class="instagram">instagram</a>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </header>
+        <!-- E: HEADER -->
+
+        <!-- S: SECTION -->
+        <section id="section">
+            <!-- cont01 -->
+            <div id="cont01" data-aos="fade-up" data-aos-duration="800">
+                <div class="titleBox">
+                    <h2>Q&A</h2>
+                    <p>동방푸드에 대해 궁금한 점을 확인해보세요.</p>
+                </div>
+
+                <div class="tabBox">
+                    <a href="QandA.html">자주 묻는 질문</a>
+                    <a href="inquiry.html" class="avtive">1:1 문의</a>
+                </div>
+
+                <div class="inquiryBox">
+                    <ul class="inquiryTab">
+                        <li class="active">ALL</li>
+                        <li>GENTAL</li>
+                        <li>OEM</li>
+                        <li>B2B</li>
+                    </ul>
+
+                    <div class="inquiryTop">
+                        <span>문의 분류</span>
+                        <span>문의 제목</span>
+                        <span>작성자</span>
+                        <span>작성일</span>
+                    </div>
+
+                    <div class="inquiryContAll">
+                        
+                    </div>
+                    
+                    <div class="inquiryContGental">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p class="category">GENTAL</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state">답변 대기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="category">GENTAL</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state complete">답변 완료</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="inquiryContOem">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p class="category">OEM</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state">답변 대기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="category">OEM</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state complete">답변 완료</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="category">OEM</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state complete">답변 완료</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="category">OEM</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state complete">답변 완료</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="inquiryCont04B2B">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p class="category">B2B</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state">답변 대기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="category">B2B</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state complete">답변 완료</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="category">B2B</p>
+                                    <b class="tit">제목이 들어갑니다. 한 줄 이상의 제목이 들어갈 경우 말줄임표시 되어 나타납니다.</b>
+                                    <div class="sub">
+                                        <span class="date">2025-07-10</span>
+                                        <p class="nickName">닉네임</p>
+                                    </div>
+                                    <span class="state complete">답변 완료</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="linkInquiryWrite">
+                        <a href="inquiry_detail_write.html">1:1 문의하기</a>
+                    </div>
+
+                    <ul class="numBox">
+                        <li class="btnPrev"><button type="button">이전</button></li>
+                        <li class="active num"><button type="button">1</button></li>
+                        <li class="num"><button type="button">2</button></li>
+                        <li class="num"><button type="button">3</button></li>
+                        <li class="num"><button type="button">4</button></li>
+                        <li class="num"><button type="button">5</button></li>
+                        <li class="btnNext"><button type="button">다음</button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- E: SECTION -->
+
+        <!-- S: FOOTER -->
+        <footer id="footer">
+            <div class="layout">
+                <a href="#" class="logo_en">동방푸드</a>
+
+                <div class="addressBox">
+                    <ul>
+                        <li>
+                            <b>본사 및 제 1공장 (음성연구소)</b>
+                            <p>충북 음성군 대소면 대금로 105번길 70</p>
+                            <p>Tel. 043 877 2075~6</p>
+                            <p>Fax. 043 877 3080</p>
+                        </li>
+                        <li>
+                            <b>제 2공장 (동방MS)</b>
+                            <p>충북 음성군 대소면 성본산단 2로 312</p>
+                            <p>Tel. 043 882 8311~2</p>
+                            <p>Fax. 043 882 8313</p>
+                        </li>
+                        <li>
+                            <b>서울 사무소</b>
+                            <p>서울시 중구 세종대로 55 부영태평빌딩 14층</p>
+                            <p>Tel. 02 776 6530~2</p>
+                            <p>Fax. 02 774 0779</p>
+                        </li>
+                        <li>
+                            <b>서울 연구소</b>
+                            <p>서울시 송파구 백제고분로7길7 민들레빌딩 4층</p>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="logo_ko">동방푸드</a>
+                </div>
+
+                <div class="linkBox">
+                    <a href="#" class="youtube">유튜브</a>
+                    <a href="#" class="instagram">인스타그램</a>
+                </div>
+                <p class="copyRight">Copyright by Dongbang FoodMaster co.,LTD. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <!-- E: FOOTER -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/common.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // aos S
+        AOS.init({
+            once: true,
+        });
+        // aos E
+
+        // 1:1 문의 탭 S
+        $(function(){
+            const tabNames = ['all', 'gental', 'oem', 'b2b'];
+
+            function getQueryParam(name) {
+                let urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            function setQueryParam(name, value) {
+                let url = new URL(window.location);
+                url.searchParams.set(name, value);
+                history.replaceState({}, '', url); // 뒤로가기 기록 없이 URL 변경
+            }
+
+            function showTabByName(tab) {
+                let index = tabNames.indexOf(tab);
+                if(index === -1) index = 0; // 기본값: all
+
+                $('.inquiryTab li').removeClass('active').eq(index).addClass('active');
+
+                if(index === 0){
+                // ALL 탭: 모든 컨텐츠 보여줌
+                    $('.inquiryContAll, .inquiryContGental, .inquiryContOem, .inquiryCont04B2B').show();
+                } else {
+                    // 나머지 탭: 해당 컨텐츠만 보여줌
+                    $('.inquiryContAll, .inquiryContGental, .inquiryContOem, .inquiryCont04B2B').hide();
+                    $('.inquiryBox > div').eq(index).show();
+                }
+            }
+
+            // 페이지 로딩 시
+            let currentTab = getQueryParam('tab');
+            showTabByName(currentTab);
+
+            // 탭 클릭 시
+            $('.inquiryTab li').click(function(){
+                let index = $(this).index();
+                let tab = tabNames[index];
+
+                showTabByName(tab);
+                setQueryParam('tab', tab);
+            });
+        });
+        // 1:1 문의 탭 E
+        
+    </script>
+</body>
+</html>
