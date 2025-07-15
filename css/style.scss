@@ -25,6 +25,46 @@
     }
 }
 
+.numBox{
+    margin: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+    li{
+        button{
+            width: 32px;
+            height: 32px;
+            color: #ff5f00;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+    .num{
+        &:hover{
+            button{
+                background-color: #ff5f00;
+                color: #fff;
+            }
+        }
+    }
+    .btnPrev, .btnNext{
+        button{
+            background: url(../img/ic_pagination.svg) no-repeat;
+            background-size: contain;
+            font-size: 0
+        }
+    }
+    .btnPrev{
+        transform: rotate(180deg);
+    }
+    .active{
+        button{
+            background-color: #ff5f00;
+            color: #fff
+        }
+    }
+}
+
 /* 메뉴 클릭 시 스크롤 비활성화 */
 body.noscroll {
     overflow: hidden;
@@ -2457,45 +2497,7 @@ body.noscroll {
                     }
                 }
             }
-            .numBox{
-                margin: 40px 0 0 0;
-                display: flex;
-                justify-content: center;
-                gap: 0 10px;
-                li{
-                    button{
-                        width: 32px;
-                        height: 32px;
-                        color: #ff5f00;
-                        font-size: 20px;
-                        font-weight: 600;
-                    }
-                }
-                .num{
-                    &:hover{
-                        button{
-                            background-color: #ff5f00;
-                            color: #fff;
-                        }
-                    }
-                }
-                .btnPrev, .btnNext{
-                    button{
-                        background: url(../img/ic_pagination.svg) no-repeat;
-                        background-size: contain;
-                        font-size: 0
-                    }
-                }
-                .btnPrev{
-                    transform: rotate(180deg);
-                }
-                .active{
-                    button{
-                        background-color: #ff5f00;
-                        color: #fff
-                    }
-                }
-            }
+            
         }
     }
 }
@@ -2694,6 +2696,273 @@ body.noscroll {
                 }
                 ul{
                     gap: 20px 0;
+                }
+            }
+        }
+    }
+}
+
+// QandA
+#wrap.QandAWrap{
+    #section{
+        padding: 124px 15px 80px;
+        box-sizing: border-box;
+        background-color: #fbe1c8;
+        // cont01
+        #cont01{
+            .tabBox{
+                display: flex;
+                justify-content: center;
+                gap: 0 28px;
+                margin: 40px 0 50px;
+                a{
+                    font-size: 14px;
+                    color: #ff5f00;
+                    font-weight: 600;
+                    padding: 6.5px 16px;
+                    box-sizing: border-box;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        width: 1px;
+                        height: 8px;
+                        background-color: #f6b28d;
+                        position: absolute;
+                        top: 50%;
+                        right: -14px;
+                        transform: translateY(-50%);
+                    }
+                    &:last-of-type{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+                .avtive{
+                    background-color: #ff4d00;
+                    color: #fff;
+                    border-radius: 20px;
+                }
+            }
+
+            .qaCont{
+                border-top: 0.1px solid #f6b28d;
+                box-sizing: border-box;
+                margin: 20px 0 0 0;
+                .qaList{
+                    .que{
+                        font-size: 16px;
+                        padding: 20px 15px 20px 37px;
+                        border-bottom: 0.1rem solid #f6b28d;
+                        box-sizing: border-box;
+                        color: #f5520a;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        gap: 0 5px;
+                        &::after{
+                            content: '';
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/qna_arrow_orange.svg) no-repeat;
+                            background-size: contain;
+                        }      
+                        span{
+                            position: relative;
+                            width: calc(100% - 20px);
+                            &::before{
+                                content: '';
+                                width: 14px;
+                                height: 18px;
+                                background: url(../img/qna_txt_q_orange.svg) no-repeat;
+                                background-size: cover;
+                                position: absolute;
+                                top: 4px;
+                                left: -22px;
+                            }
+                        }
+                    }
+                    .anw{
+                        background-color: #f5520a;
+                        font-size: 14px;
+                        height: 0;
+                        overflow: hidden;
+                        transition: 0.5s;
+                        span{
+                            padding: 20px 15px 20px 37px;   
+                            box-sizing: border-box;
+                            display: block;
+                            color: #fff;position: relative;
+                            &::before{
+                                content: '';
+                                width: 14px;
+                                height: 18px;
+                                background: url(../img/qna_txt_a.svg) no-repeat;
+                                background-size: cover;
+                                position: absolute;
+                                top: 28px;
+                                left: 15px;
+                            }
+                        }
+                    }
+                }
+                .qaList.on{
+                    background-color: #f5520a;
+                    .que{
+                        color: #fff;
+                        &::after{
+                            background: url(../img/qna_arrow_white.svg) no-repeat;
+                            background-size: contain;
+                        }
+                        span{
+                            &::before{
+                                background: url(../img/qna_txt_q.svg) no-repeat;
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 1:1 문의
+#wrap.inquiryWrap{
+    #section{
+        #cont01{
+            .inquiryBox{
+                .inquiryTab{
+                    display: flex;
+                    gap: 0 28px;
+                    padding: 16px 0;
+                    border-top: 1px solid #ff5600;
+                    border-bottom: 1px solid #ff5600;
+                    box-sizing: border-box;
+                    li{
+                        cursor: pointer;
+                        font-family: 'KartriderExtraBold';
+                        font-size: 20px;
+                        color: #ff5600;
+                        flex: 1;
+                        text-align: center;
+                        padding: 8px 0;
+                        box-sizing: border-box;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            width: 1px;
+                            height: 8px;
+                            background-color: #f6b28d;
+                            position: absolute;
+                            top: 50%;
+                            right: -14px;
+                            transform: translateY(-50%);
+                        }
+                        &:last-of-type{
+                            &::after{
+                                display: none;
+                            }
+                        }
+                    }
+                    .active{
+                        background-color: #ff5f00;
+                        color: #fff;
+                        border-radius: 40px;
+                    }
+                }
+
+                .inquiryTop{
+                    display: none;
+                }
+
+                [class ^= "inquiryCont"]{
+                    ul{
+                        li{
+                            a{
+                                display: flex;
+                                flex-direction: column;
+                                color: #ff5600;
+                                padding: 16px 0;
+                                border-bottom: 1px solid #f6b28d;
+                                box-sizing: border-box;
+                                font-size: 12px;
+                                position: relative;
+                                .tit{
+                                    width: calc(100% - 80px);
+                                    font-size: 16px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+                                .sub{
+                                    display: flex;
+                                    gap: 0 20px;
+                                    .date{
+                                        position: relative;
+                                        &::after{
+                                            content: '';
+                                            width: 1px;
+                                            height: 8px;
+                                            background-color: #f6b28d;
+                                            position: absolute;
+                                            top: 50%;
+                                            right: -10px;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+                                    .nickName{
+                                        width: calc(100% - 85px);
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                }
+                                .state{
+                                    width: 72px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 6px;
+                                    font-size: 12px;
+                                    position: absolute;
+                                    top: 16px;
+                                    right: 0px;
+                                    background-color: rgba(255, 95, 0, 0.2);
+                                }
+                                .complete{
+                                    background-color: #ff5f00;
+                                    color: #fbe1c8;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .linkInquiryWrite{
+                    margin: 20px 0 0 0;
+                    display: flex;
+                    justify-content: flex-end;
+                    a{
+                        width: 103px;
+                        height: 34px;
+                        background-color: #371909;
+                        color: #fbe1c8;
+                        font-size: 12px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0 6px;
+                        border-radius: 6px;
+                        &::after{
+                            content: '';
+                            width: 12px;
+                            height: 12px;
+                            background: url(../img/ic_pencil.svg) no-repeat;
+                            background-size: contain;
+                        }
+                    }
                 }
             }
         }
@@ -4530,6 +4799,176 @@ body.noscroll {
                     }
                     ul{
                         gap: 50px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // QandA
+    #wrap.QandAWrap{
+        #section{
+            padding: 220px 15px 200px;
+            // cont01
+            #cont01{
+                .tabBox{
+                    margin: 80px 0 60px;
+                    gap: 0 40px;
+                    a{
+                        font-size: 18px;
+                        &::after{
+                            right: -20px;
+                        }
+                    }
+                }
+
+                .qaCont{
+                     .qaList{
+                        .que{
+                            padding: 28px 30px 28px 95px;
+                            &::after{
+                                width: 30px;
+                                height: 30px;
+                            }
+                            span{
+                                width: calc(100% - 35px);
+                                font-size: 24px;
+                                line-height: 30px;
+                                font-weight: 600;
+                                &::before{
+                                    width: 30px;
+                                    height: 30px;
+                                    top: -1px;
+                                    left: -50px;
+                                }
+                            }
+                        }
+                        .anw{
+                            span{
+                                padding: 28px 30px 28px 95px;
+                                font-size: 18px;
+                                line-height: 30px;
+                                &::before{
+                                    width: 30px;
+                                    height: 30px;
+                                    top: 35px;
+                                    left: 45px;
+                                }
+                            }
+                        }
+                     }
+                }
+            }
+        }
+    }
+
+    // 1:1 문의
+    #wrap.inquiryWrap{
+        #section{
+            // #cont01
+            #cont01{
+                .inquiryBox{
+                    position: relative;
+                    .inquiryTab{
+                        padding: 30px 0 0 0;
+                        border-bottom: none;
+                        li{
+                            flex: unset;
+                            padding: 8px 18px;
+                            font-size: 25px;
+                        }
+                    }
+                    .inquiryTop{
+                        display: flex;
+                        gap: 0 45px;
+                        background-color: #f5520a;
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 19px 30px;
+                        box-sizing: border-box;
+                        margin: 40px 0 0 0;
+                        span{
+                            &:nth-of-type(1){
+                                width: 80px;
+                                text-align: center;
+                                display: block;
+                            }
+                            &:nth-of-type(2){
+                                width: calc(100% - 595px);
+                                display: block;
+                            }
+                            &:nth-of-type(3){
+                                width: 135px;
+                                text-align: center;
+                                display: block;
+                            }
+                            &:nth-of-type(4){
+                                width: 110px;
+                                text-align: center;
+                                display: block;
+                            }
+                        }
+                    }
+
+                    [class^=inquiryCont]{
+                        ul{
+                            li{
+                                a{
+                                    flex-direction: row;
+                                    align-items: center;
+                                    gap: 0 45px;
+                                    font-size: 20px;
+                                    padding: 20px 30px;
+                                    font-weight: 600;
+                                    .category{
+                                        width: 75px;
+                                        text-align: center;
+                                    }
+                                    .tit{
+                                        width: calc(100% - 593px);
+                                        font-size: 20px;
+                                    }
+                                    .sub{
+                                        gap: 0 45px;
+                                        .date{
+                                            width: auto;
+                                            order: 2;
+                                            &::after{
+                                                display: none;
+                                            }
+                                        }
+                                        .nickName{
+                                            width: 135px;
+                                            text-align: center;
+                                        }
+                                    }
+                                    .state{
+                                        width: 98px;
+                                        height: 40px;
+                                        font-size: 16px;
+                                        position: unset;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .linkInquiryWrite{
+                        position: absolute;
+                        top: 30px;
+                        right: 0px;
+                        margin: 0;
+                        a{
+                            font-size: 16px;
+                            padding: 0 16px;
+                            height: 47px;
+                            font-weight: 600;
+                            &::after{
+                                width: 19px;
+                                height: 19px;
+                            }
+                        }
                     }
                 }
             }
